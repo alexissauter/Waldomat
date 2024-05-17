@@ -1,0 +1,391 @@
+
+body {
+	font-family:Teachers;
+	font-weight: 400;	
+	font-style: normal;
+	font-size:1em;
+		
+		
+	
+	
+	display: flex;
+	flex-flow: row wrap;
+	margin:10px;
+}
+
+
+
+	
+
+
+
+
+
+/* Mobile first - alle Dokument-Blöcke bekommen 100% Breite */
+
+header,
+header1,
+nav,
+nav a,
+#article,
+section,
+#aside,
+footer
+	{
+	border-radius: 0px 0.5em 0.5em;
+	border: 1px solid;
+	padding: 10px;
+	margin-bottom: 10px;
+	flex: 1 100%;
+	
+}
+
+header1 {
+	padding:0;
+	margin: 0px 0px;
+	border: none;
+}
+
+
+
+  
+@keyframes einfliegen {
+    0% {
+    transform: scale(0.01);transform: translateX(300%);
+    opacity: 0;
+  }  
+  40% {
+    transform: scale(0.4);
+    opacity: 0.4;
+  }
+  80% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);transform: translateX(0);
+    opacity: 1;	
+  }
+}
+
+#bild {
+    animation: einfliegen 4s forwards;
+	width:50%;
+	}
+	
+#art {
+    flex: 1 100%;
+    padding:0;
+	margin: 10px 10px 0px 10px;
+	
+}
+
+#seite  {
+	flex: 1 100%;
+    padding:0;
+	margin-bottom:0px;
+	height: 100%;
+	/*img {width:100%;}*/
+}
+
+#seite img {
+	width:100%;
+}
+
+
+header {
+	background: #ebf5d7;
+	border-color: #8db243;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
+header * {
+	flex: 1 1 0%;
+}
+
+header h1{
+	text-align:center;
+	
+}
+header img {
+	flex: 0 0 150px;
+	margin-right: 50px;
+	padding-top:10px;
+	}
+
+
+
+
+.fly {
+	position: relative;
+    
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 6em;
+  
+	animation: textwelle 4s;
+}
+
+
+@keyframes textwelle {
+	0% {
+    transform: scale(0.1);
+    opacity: 0;
+	}  
+	40% {
+    transform: scale(1.25);
+    opacity: 1;
+	}
+	100% {
+    transform: scale(1);
+    opacity: 1;	
+	}
+}
+
+section {
+	background: #F1F3F4;
+	border-color: slateblue;
+}
+
+#article {
+	background: #C9FFCE;
+	border-color: #8db243;
+	/*border-color: #df6c20;*/
+	box-shadow: 3px 3px 6px grey;
+	/*flex: 3 1 0%;
+	height:100%;*/
+}
+
+#article p{
+	line-height:1.2em;
+	font-size: 1em;
+}
+
+
+detail  h2, h3, h4{
+	padding:10px 0;
+	margin:0;
+}
+
+
+detail p{
+	padding:0px 0;
+	margin:0;
+}
+
+
+
+
+.cook {
+	
+	box-sizing: border-box;
+	background-color: #eeeeee;
+	margin: 20px auto;
+	max-width: 700px;
+/*	max-height: auto; */
+	padding: 30px;
+	border-radius: 0px 0.5em 0.5em;
+	border: 1px solid;
+	border-color: darkgreen;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+	box-shadow: 3px 3px 4px grey;
+	flex-wrap: wrap;
+}
+
+.cook img {
+	height: auto;
+	padding-top:20px;
+	width:10%;
+}
+
+/*.cook p {
+  }
+*/
+
+
+details > summary {
+	display: block;
+	justify-content: start;
+	cursor: pointer;
+	/*list-style-type: '⬇ '; nur mit display: list-item*/
+  
+}
+
+/*::marker {
+  font-size: 1.5em;
+}
+*/
+
+details > p {
+	margin: 20px 0;
+	line-height: 1.2em;
+	margin: 0;
+}
+
+
+#aside{
+	background: #ebf5d7;
+	border-color: #8db243;
+	flex: 1 1 0%;
+	height: 100%;
+	line-height:1.2em;
+	margin-top:10px;
+/*	width:100%;*/
+	
+}
+
+#aside #imgnews {
+	
+	display:none;
+}
+
+
+.responsive-video {
+	position: relative;
+	padding-bottom: 43%; /* 16/9 Video */
+	/*padding-top: 0px;*/
+	height: 0;
+	overflow: hidden;
+}
+
+.responsive-video iframe,  
+.responsive-video object,  
+.responsive-video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 80%;
+}
+
+.container1 {   /* für standort.php*/
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    width: 90%;
+	
+}
+
+.container1 iframe {
+    position: absolute;
+    top: 40px;
+    left: 0;
+	width: 100%;
+    height: 100%;
+
+}
+
+.container2 {   /* für bestand.php*/
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    width: 100%;
+}
+
+.container2 iframe {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 85%;
+    height: 70%;
+}
+
+
+
+footer {
+	background: #ebf5d7;
+	border-color: #8db243;
+	display: flex;
+	flex-grow: 1;
+	
+	flex-direction:row;
+	align-items: center;
+	justify-content:space-around;
+	height:20px;
+	margin-bottom:0px;
+}
+
+/*footer * {
+	flex: 1 1 0%;
+	justify-content: space-between;
+}
+
+
+footer p {
+	text-align: center;
+}
+*/
+
+
+
+button1, button2 {
+	display:flex;
+	flex-direction:row;
+	align-items: center;
+	background: #ebf5d7;
+	max-width:150px;
+	border-color:black;
+	border: 1px solid;
+	border-radius: 0px 5px 5px 5px ;
+	font-family: teachers;
+	font-size:.9em;
+	padding: 0px 10px ;
+	height: 35px;
+	cursor: pointer;
+	
+}
+
+
+
+/* Smart Phones und Tablets mit mittlerer Auflösung */
+
+@media all and (min-width: 560px) {
+	
+	#article {
+		order: 2;
+	}
+	
+	#aside {
+		/* durch auto werden die beiden asides in eine Zeile gesetzt */
+		flex: 1 1 auto;
+		order: 3;
+	}
+	
+	#aside #imgnews {
+	
+	display:block;
+}
+	
+	
+	footer {
+		order: 5;
+		
+	}
+}
+
+
+/* Large screens */
+
+@media all and (min-width: 800px) {
+	#article, #art {
+		/* Der Article wird 2.5x so breit wie die beiden asides! */
+		
+		order: 3;
+		flex: 5 1 0%;
+	}
+	#aside, #seite {
+		flex: 2 1 0%;
+		order: 3;
+	}
+	
+	#aside #imgnews {
+		display:block;
+	}
+
+
+}
